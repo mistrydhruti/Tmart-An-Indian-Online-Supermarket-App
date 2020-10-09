@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Tmart</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="notepad">MY Diary</string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="tmart">\t \t TMART is an online Indian supermarket service operating in Mumbai. We offer wide range of products for all your everyday needs..</string>
+
+    <string name="app_desc">\t \t Along with wide range of products to offer at our stores for you to buy needy things from a channel convenient to you.
+        Choose from fresh produce to packaged goods, buy products online and get them delivered straight to your doorstep, thus making it a convenient and quick process.
+        We are sure to have all the products for your daily dietary needs from regular local Indian brands and products to exotic and international imported ones.
+        You can pay for shopping using credit cards or cash.
+    </string>
+
+
+    <string name="slide_1_title">Fast Delivery Service!</string>
+    <string name="slide_1_desc">Instant Delivery is provided. Ordered Products will be delivered within 1 hour , 2 hour or anytime of the day based on your requirements</string>
+
+    <string name="slide_2_title">Shop By Category</string>
+    <string name="slide_2_desc">TMART offers you wide range of categories. You can search your products category-wise and add to your cart.</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">TMART offers you discount on each product. Small bugdet big offers is our motive.</string>
+
+    <string name="slide_4_title">Easy Payment!</string>
+    <string name="slide_4_desc">Pay as per convinience. You can pay using credit cards via paypal or cash. Online payment is secure and safe.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+
+</resources>

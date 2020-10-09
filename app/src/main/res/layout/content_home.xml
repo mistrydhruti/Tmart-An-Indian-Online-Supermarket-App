@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:showIn="@layout/app_bar_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ViewFlipper
+            android:id="@+id/v_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/topcat_textview"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/v_flipper">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:layoutAnimation="@anim/layout_animation_left_to_right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:fontFamily="@font/amiko"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:text="Top Categories"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/topcat_textview"
+            android:id="@+id/topcat_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layoutAnimation="@anim/layout_animation_left_to_right"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="200dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/biscuits_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/biscuits_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/biscuits"
+                                android:padding="5dp"
+                                android:onClick="Biscuits"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/arial"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Biscuits"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/chocolate_ll"
+                            android:layout_toRightOf="@+id/biscuits_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/chocolate_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/chocolates"
+                                android:padding="5dp"
+                                android:onClick="chocolates"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/arial"
+                                android:textColor="#6f6f6f"
+                                android:text="Chocolates"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/personalcare_ll"
+                            android:layout_toRightOf="@+id/chocolate_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/personalcare_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/personal_care"
+                                android:onClick="personalcare"
+                                android:padding="5dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/arial"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Personal Care"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_toRightOf="@id/personalcare_ll"
+                            android:id="@+id/pulses_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/pulses_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/dals"
+                                android:onClick="pulses"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/arial"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Pulses/Dals"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bread_ll"
+                            android:layout_toRightOf="@+id/pulses_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/bread_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/bread"
+                                android:padding="5dp"
+                                android:onClick="bread"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/arial"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Bread"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/snacks_ll"
+                            android:layout_toRightOf="@+id/bread_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/snacks_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/snacks"
+                                android:padding="5dp"
+                                android:onClick="snacks"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/arial"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Snacks"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/salt_ll"
+                            android:layout_toRightOf="@+id/snacks_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/salt_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/rocksalt"
+                                android:onClick="salt"
+                                android:padding="5dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/arial"
+                                android:textColor="#6f6f6f"
+                                android:text="Salt/Sugar/Jaggery"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/jams_ll"
+                            android:layout_toRightOf="@+id/salt_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/jams_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/jams"
+                                android:padding="5dp"
+                                android:onClick="jams"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/arial"
+                                android:textColor="#6f6f6f"
+                                android:text="Jams/Spread"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/masala_ll"
+                            android:layout_toRightOf="@+id/jams_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/masala_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/masala"
+                                android:padding="5dp"
+                                android:onClick="masala"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/arial"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Masala/Spices"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ghee_ll"
+                            android:layout_toRightOf="@+id/masala_ll"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:id="@+id/ghee_circleimage"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ghee"
+                                android:padding="5dp"
+                                android:onClick="ghee"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/arial"
+                                android:textSize="18sp"
+                                android:textColor="#6f6f6f"
+                                android:text="Ghee"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+                </HorizontalScrollView>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bestselling_textview"
+            android:layout_below="@id/topcat_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:layoutAnimation="@anim/layout_animation_down_to_up"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:fontFamily="@font/amiko"
+                    android:text="Best Selling Items"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bestselling_cardviews"
+            android:layout_below="@+id/bestselling_textview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layoutAnimation="@anim/layout_animation_down_to_up"
+                        android:layout_height="250dp">
+
+                        <View
+                            android:id="@+id/best_view1"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"/>
+                        <LinearLayout
+                            android:layout_toRightOf="@+id/best_view1"
+                            android:id="@+id/best_card1"
+                            android:background="@color/white"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <ImageView
+                                        android:padding="10dp"
+                                        android:src="@drawable/darkchoco"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="5"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:weightSum="10"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:textColor="@color/black"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="145"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/arial"
+                                            android:gravity="center|left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:gravity="center|right"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/strikethrought"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="285"
+                                            android:textSize="16sp"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:background="@drawable/strikethrought"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="center"
+                                        android:text="Lindt Excellence 90% Cocoa Dark Chocolate"/>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.2"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="5"
+                                        android:gravity="center"
+                                        android:layout_height="0dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="ADD"
+                                            android:onClick="bestselling"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/white"
+                                            android:background="@drawable/add_btn_left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"/>
+
+                                        <ImageView
+                                            android:padding="5dp"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/add_btn_right"
+                                            android:src="@drawable/ic_add_black_24dp"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_toEndOf="@id/best_card1"
+                            android:id="@+id/best_view2"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"/>
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_toRightOf="@id/best_view2"
+                            android:id="@+id/best_card2"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardElevation="6dp"
+                                app:cardCornerRadius="12dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <ImageView
+                                        android:padding="10dp"
+                                        android:src="@drawable/nute"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="5"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:weightSum="10"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:textColor="@color/black"
+                                            android:gravity="center"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="169"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/arial"
+                                            android:textSize="16sp"
+                                            android:gravity="center|left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:gravity="center|right"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/strikethrought"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="339"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/arial"
+                                            android:gravity="center"
+                                            android:background="@drawable/strikethrought"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:fontFamily="@font/arial"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="center"
+                                        android:text="Nutella hazelnut Spread with Cocoa"/>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.2"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="5"
+                                        android:gravity="center"
+                                        android:layout_height="0dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="ADD"
+                                            android:onClick="bestselling"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:fontFamily="@font/arial"
+                                            android:textColor="@color/white"
+                                            android:background="@drawable/add_btn_left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"/>
+
+                                        <ImageView
+                                            android:padding="5dp"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/add_btn_right"
+                                            android:src="@drawable/ic_add_black_24dp"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_toEndOf="@id/best_card2"
+                            android:id="@+id/best_view3"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"/>
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_toRightOf="@id/best_view3"
+                            android:id="@+id/best_card3"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardElevation="6dp"
+                                app:cardCornerRadius="12dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <ImageView
+                                        android:padding="10dp"
+                                        android:src="@drawable/ioraange"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="5"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:weightSum="10"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:textColor="@color/black"
+                                            android:gravity="center"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="240"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/arial"
+                                            android:textSize="16sp"
+                                            android:gravity="center|left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:gravity="center|right"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/strikethrought"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="300"
+                                            android:fontFamily="@font/arial"
+                                            android:textSize="16sp"
+                                            android:gravity="center"
+                                            android:background="@drawable/strikethrought"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="center"
+                                        android:text="Lindt Excellence intense oRange DArk Chocolate"/>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.2"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="5"
+                                        android:gravity="center"
+                                        android:layout_height="0dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="ADD"
+                                            android:onClick="bestselling"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/white"
+                                            android:background="@drawable/add_btn_left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"/>
+
+                                        <ImageView
+                                            android:padding="5dp"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/add_btn_right"
+                                            android:src="@drawable/ic_add_black_24dp"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_toEndOf="@id/best_card3"
+                            android:id="@+id/best_view4"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"/>
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_toRightOf="@id/best_view4"
+                            android:id="@+id/best_card4"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardElevation="6dp"
+                                app:cardCornerRadius="12dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <ImageView
+                                        android:padding="10dp"
+                                        android:src="@drawable/funfoods"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="5"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:weightSum="10"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:textColor="@color/black"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="137"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/arial"
+                                            android:gravity="center|left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:gravity="center|right"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/arial"
+                                            android:background="@drawable/strikethrought"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="205"
+                                            android:textSize="16sp"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:background="@drawable/strikethrought"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="center"
+                                        android:text="Funfoods Veg Mayonnaise Original"/>
+
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.2"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="5"
+                                        android:gravity="center"
+                                        android:layout_height="0dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="ADD"
+                                            android:onClick="bestselling"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:fontFamily="@font/arial"
+                                            android:textColor="@color/white"
+                                            android:background="@drawable/add_btn_left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"/>
+
+                                        <ImageView
+                                            android:padding="5dp"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/add_btn_right"
+                                            android:src="@drawable/ic_add_black_24dp"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_toEndOf="@id/best_card4"
+                            android:id="@+id/best_view5"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"/>
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_toRightOf="@id/best_view5"
+                            android:id="@+id/best_card5"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardElevation="6dp"
+                                app:cardCornerRadius="12dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <ImageView
+                                        android:padding="10dp"
+                                        android:src="@drawable/lott"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="5"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:weightSum="10"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:textColor="@color/black"
+                                            android:gravity="center"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:fontFamily="@font/arial"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="125"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:gravity="center|left"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:gravity="center|right"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/strikethrought"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="200"
+                                            android:fontFamily="@font/arial"
+                                            android:textSize="16sp"
+                                            android:gravity="center"
+                                            android:background="@drawable/strikethrought"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:fontFamily="@font/arial"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="center"
+                                        android:text="Lotte Choco Pie"/>
+
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.2"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="5"
+                                        android:gravity="center"
+                                        android:layout_height="0dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="ADD"
+                                            android:onClick="bestselling"
+                                            android:fontFamily="@font/arial"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/white"
+                                            android:background="@drawable/add_btn_left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"/>
+
+                                        <ImageView
+                                            android:padding="5dp"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/add_btn_right"
+                                            android:src="@drawable/ic_add_black_24dp"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_toEndOf="@id/best_card5"
+                            android:id="@+id/best_view6"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"/>
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_toRightOf="@id/best_view6"
+                            android:id="@+id/best_card6"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardElevation="6dp"
+                                app:cardCornerRadius="12dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <ImageView
+                                        android:padding="10dp"
+                                        android:src="@drawable/vas"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="5"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:weightSum="10"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:textColor="@color/black"
+                                            android:gravity="center"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/arial"
+                                            android:textStyle="bold"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="285"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/arial"
+                                            android:textSize="16sp"
+                                            android:gravity="center|left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:gravity="center|right"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/arial"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/strikethrought"
+                                            android:text="@string/Rs"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="145"
+                                            android:textSize="16sp"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/arial"
+                                            android:background="@drawable/strikethrought"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:fontFamily="@font/arial"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="center"
+                                        android:text="Vaseline Intensive Care Deep Restore Body Lotion"/>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.2"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="5"
+                                        android:gravity="center"
+                                        android:layout_height="0dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:text="ADD"
+                                            android:onClick="bestselling"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:fontFamily="@font/arial"
+                                            android:textColor="@color/white"
+                                            android:background="@drawable/add_btn_left"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"/>
+
+                                        <ImageView
+                                            android:padding="5dp"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/add_btn_right"
+                                            android:src="@drawable/ic_add_black_24dp"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_toEndOf="@id/best_card6"
+                            android:layout_width="10dp"
+                            android:layout_height="250dp"
+                            android:id="@+id/best_view7"/>
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:layout_toRightOf="@id/best_view7"
+                            android:id="@+id/best_card7"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardElevation="6dp"
+                                app:cardCornerRadius="12dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorAccent"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:onClick="seeallproducts"
+                                    android:fontFamily="@font/arial"
+                                    android:text="See all > "/>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </HorizontalScrollView>
+            </ScrollView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:id="@+id/view"
+            android:layout_below="@+id/bestselling_cardviews"/>
+
+        <ViewFlipper
+            android:layout_below="@+id/view"
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>

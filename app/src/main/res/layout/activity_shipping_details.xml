@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="13"
+    tools:context=".ConfirmFinalOrderActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/amiko"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:text="Shipping Details"/>
+
+    <LinearLayout
+        android:id="@+id/delivery_address"
+        android:layout_weight="4.1"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:gravity="center"
+        android:background="@drawable/linearlayout_design"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/arial"
+            android:textSize="17dp"
+            android:hint="Enter your name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_weight="1.8"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/arial"
+            android:textSize="17dp"
+            android:inputType="textEmailAddress"
+            android:hint="abc@gmail.com"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <EditText
+            android:id="@+id/flatno"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/arial"
+            android:textSize="17dp"
+            android:inputType="text"
+            android:hint="Enter flat no and building name eg: 126/A"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <EditText
+            android:id="@+id/addre"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:ems="10"
+            android:textColor="@color/black"
+            android:fontFamily="@font/arial"
+            android:hint="Enter your address"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:textSize="17sp"
+            android:layout_gravity="center"/>
+
+        <!--  <TextView
+              android:id="@+id/deliveryrestr"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="4"
+              android:ems="10"
+              android:visibility="gone"
+              android:textColor="@color/black"
+              android:fontFamily="@font/amiko"
+              android:gravity="start|top"
+              android:padding="5dp"
+              android:textSize="18sp"
+              android:layout_gravity="center"/>
+
+  -->
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/amiko"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Expected Time of Delivery"/>
+
+    <RadioGroup
+        android:layout_weight="2.4"
+        android:layout_margin="5dp"
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:background="@drawable/linearlayout_design"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:fontFamily="@font/arial"
+            android:checked="true"
+            android:textColor="@color/black"
+            android:text="Within 1 hour"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:fontFamily="@font/arial"
+            android:textColor="@color/black"
+            android:text="Within 2 hour"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:fontFamily="@font/arial"
+            android:textColor="@color/black"
+            android:text="Anytime of the day"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/amiko"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Choose your payment method"/>
+
+    <RadioGroup
+        android:id="@+id/rgpay"
+        android:layout_weight="2"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:background="@drawable/linearlayout_design"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:id="@+id/rbpay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:fontFamily="@font/arial"
+            android:textColor="@color/black"
+            android:checked="true"
+            android:text="PayPal"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/rbcash"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:fontFamily="@font/arial"
+            android:textColor="@color/black"
+            android:text="Cash On Delivery"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:weightSum="4"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:background="@drawable/button_design"
+            android:text="Proceed"
+            android:fontFamily="@font/amiko"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

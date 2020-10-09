@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.magicalwinds">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <dist:module dist:instant="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SpecialVideo"></activity>
+        <activity android:name=".SearchCategories" />
+        <activity android:name=".SpecialOffer" />
+        <activity android:name=".PaymentDetails" />
+        <activity android:name=".Paypal" />
+        <activity android:name=".DailyNews" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".ViewNotes" />
+        <activity android:name=".NotepadCreation" />
+        <activity android:name=".ShowReceipt" />
+        <activity android:name=".ViewOrderProducts" />
+        <activity android:name=".ViewOrders" />
+        <activity android:name=".Orders" />
+        <activity android:name=".PayOnlineActivity" />
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".ShippingDetailsActivity" />
+        <activity android:name=".SeeAllDisplayActivity" />
+        <activity android:name=".ConfirmFinalOrderActivity" />
+        <activity android:name=".InternetRequestActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".Mustard" />
+        <activity android:name=".OliveOil" />
+        <activity android:name=".GroundnutOil" />
+        <activity android:name=".RiceBranOil" />
+        <activity android:name=".BlendedOil" />
+        <activity android:name=".SunflowerOil" />
+        <activity android:name=".Oats" />
+        <activity android:name=".Muesli" />
+        <activity android:name=".Flakes" />
+        <activity android:name=".Ready" />
+        <activity android:name=".Herbs" />
+        <activity android:name=".Cooking" />
+        <activity android:name=".Whole" />
+        <activity android:name=".Powdered" />
+        <activity android:name=".Dips" />
+        <activity android:name=".Mayonnaise" />
+        <activity android:name=".Honey" />
+        <activity android:name=".Spreads" />
+        <activity android:name=".JamSection" />
+        <activity android:name=".Jaggery" />
+        <activity android:name=".Sugar" />
+        <activity android:name=".SaltSection" />
+        <activity android:name=".Khari" />
+        <activity android:name=".WaferBiscuits" />
+        <activity android:name=".CreamBiscuits" />
+        <activity android:name=".Salty" />
+        <activity android:name=".Marie" />
+        <activity android:name=".Glucose" />
+        <activity android:name=".Cookies" />
+        <activity android:name=".OtherSnack" />
+        <activity android:name=".Namkeen" />
+        <activity android:name=".Chips" />
+        <activity android:name=".Sev" />
+        <activity android:name=".Popcorn" />
+        <activity android:name=".Shave" />
+        <activity android:name=".Skin" />
+        <activity android:name=".Sanitory" />
+        <activity android:name=".Oral" />
+        <activity android:name=".Hair" />
+        <activity android:name=".Deos" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".ShopByCategories" />
+        <activity android:name=".UserRegistration" />
+        <activity android:name=".Pickles" />
+        <activity android:name=".HomeKitchen" />
+        <activity android:name=".Breakfast" />
+        <activity android:name=".Soups" />
+        <activity android:name=".Flour" />
+        <activity android:name=".Rice" />
+        <activity android:name=".Oil" />
+        <activity android:name=".DryFruits" />
+        <activity android:name=".Biscuits" />
+        <activity android:name=".BabyProducts" />
+        <activity android:name=".Chocolate" />
+        <activity android:name=".Ghee" />
+        <activity android:name=".Masala" />
+        <activity android:name=".Jams" />
+        <activity android:name=".Salt" />
+        <activity android:name=".Snacks" />
+        <activity android:name=".Bread" />
+        <activity android:name=".PersonalCare" />
+        <activity android:name=".Pulses" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SignOut" />
+        <activity android:name=".Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".Service.MyFirebaseIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Service.MyFirebaseMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

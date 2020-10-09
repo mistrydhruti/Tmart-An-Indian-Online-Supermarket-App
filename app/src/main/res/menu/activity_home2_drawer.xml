@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group>
+        <item
+            android:id="@+id/mydiary"
+            android:icon="@drawable/mydiary"
+            android:title="My Diary"
+            android:tooltipText="MY Diary"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/category"
+            android:title="Shop By Categories"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/nav_cart"
+            android:title="My Cart"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/orders"
+            android:title="My Orders"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/dailynews"
+            android:icon="@drawable/dailynews"
+            android:title="Today's News"
+            android:iconTint="@color/white"/>
+
+        <item
+            android:id="@+id/offers"
+            android:icon="@drawable/offer"
+            android:title="Special Offers"
+            android:iconTint="@color/white"/>
+
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/feedback"
+            android:title="Feedback"
+            android:iconTint="@color/white"/>
+
+
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/aboutus"
+            android:title="About Us"
+            android:iconTint="@color/white"/>
+
+        <item
+            android:id="@+id/nav_signout"
+            android:icon="@drawable/logout"
+            android:title="Sign Out"
+            android:iconTint="@color/white"/>
+
+    </group>
+
+</menu>

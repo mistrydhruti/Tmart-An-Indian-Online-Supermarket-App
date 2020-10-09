@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="13"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:id="@+id/backbtn"
+            android:src="@drawable/back_white"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_weight="8"
+            android:id="@+id/tot_price"
+            android:text="MY CART"
+            android:fontFamily="@font/amiko"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/colorAccent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_white"
+            android:id="@+id/home"
+            android:padding="5dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartlist"
+        android:padding="5dp"
+        android:layoutAnimation="@anim/layout_animation_left_to_right"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"/>
+
+    <LinearLayout
+        android:weightSum="5"
+        android:padding="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="Next"
+            android:onClick="nextbtn"
+            android:id="@+id/next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/button_design"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

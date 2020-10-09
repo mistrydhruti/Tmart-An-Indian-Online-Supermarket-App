@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="13"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="10"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="back_button"
+            android:padding="5dp"
+            android:id="@+id/back_button"
+            android:src="@drawable/back_white"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/detail"
+            android:text="PRODUCT DETAILS"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:onClick="Go_to_home"
+            android:src="@drawable/home_white"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="3.8"
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:id="@+id/dis_product_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="0.6">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/dis_product_savings"
+            android:background="@drawable/savingbutton_left"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="15%"
+            android:gravity="center|right"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:background="@drawable/savingbutton_right"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="off"
+            android:paddingLeft="5dp"
+            android:gravity="center|left"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <LinearLayout
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/dis_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/arial"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:ems="10"
+                android:text="Grofers Mother's Rice Bran Oil(Jar)" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:weightSum="5"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/arial"
+                android:gravity="center_vertical"
+                android:text="Quantity : "
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/dis_product_quantity"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="1 L"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="0dp"
+                android:id="@+id/number_button"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textAlignment="center"
+                app:textSize="8sp"
+                app:initialNumber="1"
+                app:finalNumber="100"
+                app:textColor="@color/white"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="1">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/dis_mrppp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:paddingRight="2dp"
+            android:fontFamily="@font/arial"
+            android:gravity="center|end"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/Rs"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/dis_tmartprice"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:fontFamily="@font/arial"
+            android:paddingLeft="2dp"
+            android:gravity="center|start"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="100 "/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text="@string/Rs"
+                android:background="@drawable/strikethrought"
+                android:paddingRight="5dp"
+                android:fontFamily="@font/arial"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center|end"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/dis_mrpprice"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:paddingLeft="2dp"
+                android:background="@drawable/strikethrought"
+                android:fontFamily="@font/arial"
+                android:text="140 "
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center|start"/>
+
+
+        </LinearLayout>
+        <!--<View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+        <LinearLayout
+            android:id="@+id/add_product"
+            android:layout_width="0dp"
+            android:weightSum="3"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="ADD"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/add_btn_left"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/add_btn_right"
+                android:src="@drawable/ic_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="DESCRIPTION "
+                android:textSize="16sp"
+                android:fontFamily="@font/arial"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight="9"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_weight="3">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:weightSum="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dis_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/arial"
+                    android:textColor="#565656"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:ems="10"
+                    android:text="Grofers Mother's Rice Bran Oil(Jar)" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/pd_add_cart"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:fontFamily="@font/amiko"
+            android:textStyle="bold"
+            android:background="@drawable/button_design"
+            android:text="Add to cart"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

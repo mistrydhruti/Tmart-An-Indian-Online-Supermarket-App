@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:weightSum="10"
+                android:gravity="center"
+                android:background="@color/colorAccent"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="SPECIAL OFFERS"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:fontFamily="@font/amiko"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:onClick="Go_to_home"
+                    android:src="@drawable/home_white"
+                    android:layout_height="match_parent"/>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/header"
+            android:id="@+id/wednesday_poster"
+            android:src="@drawable/banner" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_below="@id/wednesday_poster"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@id/v1"
+            android:id="@+id/whatis"
+            android:text="Magical Thursday brings exciting offers and deals for your small budget."
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/alice"
+            android:textStyle="normal"
+            android:textColor="@color/deepblue"
+            android:gravity="center"
+             />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_below="@id/whatis"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@id/whatis"
+            android:id="@+id/coming"
+            />
+
+        <View
+            android:id="@+id/v3"
+            android:layout_below="@id/coming"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/coming"
+            android:id="@+id/offers"
+            android:src="@drawable/offers" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_below="@+id/offers"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:text="PROMO EXPIRES IN :"
+            android:id="@+id/txt"
+            android:background="@color/yellow"
+            android:layout_below="@id/view1"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="@color/turquoise_blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+
+
+        <RelativeLayout
+            android:id="@+id/timer"
+            android:gravity="center"
+            android:layout_below="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:weightSum="3.4"
+                android:gravity="center">
+
+                <View
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/clock"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_weight="1.5"
+                        android:text="02"
+                        android:id="@+id/hr"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+                    <TextView
+                        android:layout_weight="1.5"
+                        android:text="Hrs"
+                        android:gravity="center|top"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/clock"
+                    android:weightSum="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/min"
+                        android:layout_weight="1.5"
+                        android:text="28"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/turquoise_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+                    <TextView
+                        android:layout_weight="1.5"
+                        android:text="Mins"
+                        android:gravity="center|top"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/turquoise_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    android:background="@drawable/clock"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sec"
+                        android:layout_weight="1.5"
+                        android:text="51"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+                    <TextView
+                        android:layout_weight="1.5"
+                        android:text="Secs"
+                        android:gravity="center|top"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_below="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <ViewFlipper
+            android:id="@+id/promo_view_flipper"
+            android:layout_below="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"/>
+
+        <View
+            android:layout_below="@id/promo_view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>

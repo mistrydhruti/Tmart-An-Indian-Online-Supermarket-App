@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/previous_order"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:text="Ordered On :"
+                    android:textSize="16sp"
+                    android:paddingBottom="5dp"
+                    android:fontFamily="@font/arial"
+                    android:gravity="center|bottom|right"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/orderdate"
+                    android:layout_width="0dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/arial"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|bottom|left"
+                    android:text="31-Mar-2020"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/orderId"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:fontFamily="@font/arial"
+                android:textSize="16sp"
+                android:paddingTop="5dp"
+                android:gravity="center|top"
+                android:textColor="@color/black"
+                android:text="Postpaid Mobile Bill payment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <LinearLayout
+                android:id="@+id/cancelorder"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/ordercancel"
+                    android:layout_weight="10"
+                    android:layout_margin="3dp"
+                    android:background="@color/white"
+                    android:text="Cancel Order"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/red"
+                    android:fontFamily="@font/arial"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

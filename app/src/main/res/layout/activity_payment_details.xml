@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="13"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_weight="1"
+        android:text="PAYMENT RECEIPT"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:fontFamily="@font/amiko"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <ImageView
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:src="@drawable/check"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="@font/arial"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="PAYMENT SUCCESSFUL !"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/linearlayout_design"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_weight="4.5"
+                android:text="Payment ID"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text=":"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtId"
+                android:layout_width="0dp"
+                android:layout_weight="5.2"
+                android:textSize="18sp"
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_weight="4.5"
+                android:text="State"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text=":"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="0dp"
+                android:layout_weight="5.2"
+                android:textSize="18sp"
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_weight="4.5"
+                android:text="Amount"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text=":"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtAccount"
+                android:layout_width="0dp"
+                android:layout_weight="5.2"
+                android:textSize="18sp"
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/continue_shopping"
+            android:text="Continue Shopping"
+            android:background="@drawable/button_design"
+            android:textColor="@color/white"
+            android:layout_weight="4"
+            android:fontFamily="@font/amiko"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+
+    </LinearLayout>
+</LinearLayout>

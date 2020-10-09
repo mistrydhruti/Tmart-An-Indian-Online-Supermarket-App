@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:weightSum="13"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:id="@+id/backbtn"
+            android:onClick="go_back"
+            android:src="@drawable/back_white"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_weight="8"
+            android:id="@+id/tot_price"
+            android:text="FEEDBACK"
+            android:fontFamily="@font/amiko"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/colorAccent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_white"
+            android:id="@+id/home"
+            android:onClick="Go_to_home"
+            android:padding="5dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:text="How was your experience with our App? "
+            android:textColor="#212121"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:id="@+id/excellent"
+            android:onClick="excellent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:id="@+id/excellent_face"
+                android:src="@drawable/ic_sentiment_very_satisfied_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:id="@+id/excellent_text"
+                android:text="Excellent"
+                android:gravity="center"
+                android:textColor="#212121"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/good"
+            android:weightSum="2"
+            android:onClick="good"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:id="@+id/good_face"
+                android:src="@drawable/ic_sentiment_satisfied_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="Good"
+                android:id="@+id/good_text"
+                android:gravity="center"
+                android:textColor="#212121"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/average"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:onClick="average"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:id="@+id/average_face"
+                android:src="@drawable/ic_sentiment_neutral_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="Average"
+                android:id="@+id/average_text"
+                android:gravity="center"
+                android:textColor="#212121"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/poor"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:onClick="poor"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:id="@+id/poor_face"
+                android:src="@drawable/ic_sentiment_dissatisfied_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/poor_text"
+                android:layout_weight="0.5"
+                android:text="Poor"
+                android:gravity="center"
+                android:textColor="#212121"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/very_poor"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:onClick="Very_poor"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/very_poor_face"
+                android:layout_weight="1.5"
+                android:src="@drawable/ic_sentiment_very_dissatisfied_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="Very Poor"
+                android:id="@+id/very_poor_text"
+                android:gravity="center"
+                android:textColor="#212121"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="What would you like to share with us? "
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/feedback_message"
+        android:layout_width="match_parent"
+        android:layout_weight="2.5"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.4">
+
+        <Button
+            android:id="@+id/send_feedback"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_design"
+            android:layout_gravity="center|center_horizontal"
+            android:padding="5dp"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
